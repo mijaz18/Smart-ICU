@@ -1,0 +1,13 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Thu Jun 21 15:12:45 2018
+
+@author: muhammadusamaijaz
+"""
+import pandas as pd
+first=pd.read_csv('dataset_mimic_filter_a_multi_thread.csv')
+second=pd.read_csv('dataset_mimic_filter_b_multi_thread.csv')
+
+merged = pd.merge(first, second, how='left', on='SUBJECT_ID')
+merged.to_csv('merged.csv', index=False)
