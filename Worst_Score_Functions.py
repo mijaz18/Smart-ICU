@@ -48,7 +48,7 @@ def HeartRate(minn,maxx):
     x=minn
     y=maxx
     diff_min=abs(x-70)
-    diff_max=abs(y-109)
+    diff_max=abs(y-100)
     if diff_min>=diff_max :
         return minn
     elif diff_min<diff_max :
